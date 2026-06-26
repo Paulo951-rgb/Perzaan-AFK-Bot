@@ -374,7 +374,7 @@ function createBot() {
       port: config.server.port,
       version: config.server.version,
       hideErrors: false,
-      checkTimeoutInterval: 120000 // 2 minutes - detects dead connections without false-positive disconnects
+      checkTimeoutInterval: 180000 // 2 minutes - detects dead connections without false-positive disconnects
     });
 
     bot.loadPlugin(pathfinder);
@@ -385,7 +385,7 @@ function createBot() {
         console.log('[Bot] Connection timeout - no spawn received');
         scheduleReconnect();
       }
-    }, 60000);
+    }, 120000);
 
     bot.once('spawn', () => {
       clearTimeout(connectionTimeout);
@@ -902,4 +902,8 @@ console.log(`Version: ${config.server.version}`);
 console.log(`Auto-Reconnect: ${config.utils['auto-reconnect'] ? 'Enabled' : 'Disabled'}`);
 console.log('='.repeat(50));
 
-createBot();
+console.log('[Bot] Waiting 15 seconds for Aternos server to fully load...');
+setTimeout(() => {
+  createBot();
+}, 15000);
+  
