@@ -181,9 +181,9 @@ function initializeModules(bot, mcData, defaultMove) {
     setInterval(() => {
       if (bot && botState.connected) {
         bot.setControlState('jump', true);
-        setTimeout(() => bot.setControlState('jump', false), 100);
+        setTimeout(() => bot.setControlState('jump', false), 150);
       }
-    }, 3000);
+    }, 8000);
   }
 
   // Ajoute ici tes autres fonctions (startCircleWalk, etc.) si besoin
