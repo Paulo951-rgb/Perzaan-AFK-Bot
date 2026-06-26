@@ -28,7 +28,7 @@
     "chat-messages": {
       "enabled": true,
       "repeat": true,
-      "repeat-delay": 500,
+      "repeat-delay": 600,
       "messages": [
         "I'm a regular player",
         "Subscribe to Perzaan Gaming!",
@@ -37,28 +37,28 @@
     },
     "chat-log": true,
     "auto-reconnect": true,
-    "auto-reconnect-delay": 8000,
-    "max-reconnect-delay": 45000,
+    "auto-reconnect-delay": 12000,
+    "max-reconnect-delay": 60000,
     "periodic-rejoin": {
       "enabled": true,
-      "min-interval": 60,
-      "max-interval": 180
+      "min-interval": 150,
+      "max-interval": 300
     }
   },
   "movement": {
     "enabled": true,
     "circle-walk": {
       "enabled": true,
-      "radius": 5,
-      "speed": 2500
+      "radius": 6,
+      "speed": 2200
     },
     "look-around": {
       "enabled": true,
-      "interval": 4000
+      "interval": 5000
     },
     "random-jump": {
       "enabled": true,
-      "interval": 8000
+      "interval": 10000
     }
   },
   "modules": {
